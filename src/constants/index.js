@@ -23,6 +23,11 @@ import {
     jobit,
     tripguide,
     threejs,
+    freelance,
+    ktda,
+    liveapp,
+    rick,
+    travel,
   } from "../assets";
   
   export const navLinks = [
@@ -42,11 +47,11 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "UI/UX Design",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Full Stack Development",
       icon: mobile,
     },
     {
@@ -54,7 +59,7 @@ import {
       icon: backend,
     },
     {
-      title: "Content Creator",
+      title: "API Intergration & Development",
       icon: creator,
     },
   ];
@@ -73,13 +78,13 @@ import {
       icon: javascript,
     },
     {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
       name: "React JS",
       icon: reactjs,
     },
+    {
+      name: "TypeScript",
+      icon: typescript,
+    },    
     {
       name: "Redux Toolkit",
       icon: redux,
@@ -117,97 +122,96 @@ import {
   const experiences = [
     {
       title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
+      company_name: "Kenya Tea Development Agency",
+      icon: ktda,
       iconBg: "#383E56",
       date: "March 2020 - April 2021",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Learned to debug code and optimize algorithms for efficiency.",
+        "Gained practical knowledge in web development, contributing to projects and understanding the full stack of technologies involved.",
+        "Improved ability to communicate technical concepts to non-technical stakeholders from other departments.",
+        "Adapted to a professional work environment, learning time management and the importance of early communication.",
       ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
+      title: "Full Stack Developer",
+      company_name: "Freelancer",
+      icon: freelance,
       iconBg: "#E6DEDD",
       date: "Jan 2021 - Feb 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Developing and maintaining web applications using React Js and other related technologies.",
         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
         "Implementing responsive design and ensuring cross-browser compatibility.",
         "Participating in code reviews and providing constructive feedback to other developers.",
       ],
     },
-    {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
+    // {
+    //   title: "Web Developer",
+    //   company_name: "Shopify",
+    //   icon: shopify,
+    //   iconBg: "#383E56",
+    //   date: "Jan 2022 - Jan 2023",
+    //   points: [
+    //     "Developing and maintaining web applications using React.js and other related technologies.",
+    //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+    //     "Implementing responsive design and ensuring cross-browser compatibility.",
+    //     "Participating in code reviews and providing constructive feedback to other developers.",
+    //   ],
+    // },
+    // {
+    //   title: "Full stack Developer",
+    //   company_name: "Meta",
+    //   icon: meta,
+    //   iconBg: "#E6DEDD",
+    //   date: "Jan 2023 - Present",
+    //   points: [
+    //     "Developing and maintaining web applications using React.js and other related technologies.",
+    //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+    //     "Implementing responsive design and ensuring cross-browser compatibility.",
+    //     "Participating in code reviews and providing constructive feedback to other developers.",
+    //   ],
+    // },
   ];
   
   const testimonials = [
     {
       testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+        "Gideon is so down to earth. He is very eager to learn and deliver high end software products",
+      name: "Mathias Angule",
+      designation: "Senior Software Engineer",
+      company: "MS",
+      image: "https://randomuser.me/api/portraits/men/4.jpg",
     },
     {
       testimonial:
         "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
+      name: "Felix Koros",
+      designation: "Senior Aircraft Maintenance Engineer",
+      company: "Bombardier",
       image: "https://randomuser.me/api/portraits/men/5.jpg",
     },
     {
       testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
+        "After Gideon optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      name: "Hosea Rono",
+      designation: "CEO",
+      company: "May Construction",
+      image: "https://randomuser.me/api/portraits/men/6.jpg",
     },
   ];
   
   const projects = [
     {
-      name: "Car Rent",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      name: "Live Chat App",
+      description: "This project is a Live Chat App created using Vite and TypeScript, utilizing the @stream-io/video-react-sdk.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Video-Streaming",
           color: "green-text-gradient",
         },
         {
@@ -215,13 +219,13 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: liveapp,
+      source_code_link: "https://github.com/Kip-rotich46/live-chat-app",
     },
     {
-      name: "Job IT",
+      name: "Rick Morty & Wiki",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A React application that allows users to browse and filter characters, episodes, and locations from the Rick and Morty universe. This app utilizes the Rick and Morty API to fetch and display data.",
       tags: [
         {
           name: "react",
@@ -232,24 +236,24 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "css",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: rick,
+      source_code_link: "https://github.com/Kip-rotich46/rick-morty_wiki",
     },
     {
-      name: "Trip Guide",
+      name: "Travel Advisor",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Geolocation, Google Maps API & Google Places API, fetching API data based on the location, data filtering are just some features that make this Travel Advisor App the best Maps Application",
       tags: [
         {
-          name: "nextjs",
+          name: "React Js",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "api",
           color: "green-text-gradient",
         },
         {
@@ -257,8 +261,8 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: travel,
+      source_code_link: "https://github.com/Kip-rotich46/travel-advisor",
     },
   ];
   

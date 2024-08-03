@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import logo3 from './logo3.png';
 import logo4 from './logo4.svg';
+import liveapp from './live-app.png';
 
 import backend from "./backend.png";
 import creator from "./creator.png";
@@ -28,15 +29,20 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import freelance from "./company/freelance.jpg";
+import ktda from "./company/ktda.webp";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import rick from "./rick.jpeg";
+import travel from "./travel.png";
 
 export {
   logo,
   logo4,
   logo3,
+  liveapp,
   backend,
   creator,
   mobile,
@@ -61,7 +67,11 @@ export {
   shopify,
   starbucks,
   tesla,
+  freelance,
+  ktda,
   carrent,
   jobit,
   tripguide,
+  rick,
+  travel,
 };

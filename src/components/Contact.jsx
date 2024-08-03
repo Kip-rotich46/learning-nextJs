@@ -7,6 +7,7 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -16,9 +17,46 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => { }
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
 
-  const handleSubmit = (e) => { }
+    setForm({
+      ...form,
+      [name]: value
+    });
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.send(
+      'service_9risyf4',
+      'template_u339isf',
+      {
+        from_name: form.name,
+        to_name: 'Gideon Kiprotich',
+        from_email: form.email,
+        to_email: 'giddyprotio@gmail.com',
+        message: form.message,
+      },
+      '64cJM8HCnBmIU_5Id'
+    )
+      .then(() => {
+        setLoading(false);
+        alert('Thank you. I will get back to you as soon as possible.');
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        })
+      }, (error) => {
+        setLoading(false);
+        console.log(error);
+        alert('Error sending email. Please try again.')
+      })
+  }
 
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
@@ -67,16 +105,16 @@ const Contact = () => {
           </label>
 
           <button
-          type='submit'
-          className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'>
+            type='submit'
+            className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'>
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
       </motion.div>
 
       <motion.div
-      variants={slideIn('right', 'tween', 0.2, 1)}
-      className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
+        variants={slideIn('right', 'tween', 0.2, 1)}
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
         Earth
         {/* <EarthCanvas /> */}
       </motion.div>
