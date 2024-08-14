@@ -1,11 +1,17 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCirclePlay, faCirclePause } from '@fortawesome/free-regular-svg-icons';
 
 import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+
+import progVid from "../assets/progVid.mp4";
+import earth from '../assets/earth.mp4';
+
 
 
 const Contact = () => {
@@ -57,6 +63,20 @@ const Contact = () => {
         alert('Error sending email. Please try again.')
       })
   }
+
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const togglePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
@@ -114,9 +134,26 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
-        Earth
-        {/* <EarthCanvas /> */}
+        className='flex-1 h-full flex flex-col items-center justify-center xl:flex-1 xl:h-auto md:h-[550px]'>
+        <div className="relative w-full h-full overflow-hidden">
+          <div className=" absolute top-[3%] left-1/2 transform -translate-x-1/2 w-full max-w-6xl h-[60vh] bg-black rounded-2xl overflow-hidden">
+            <video ref={videoRef} src={earth} loop muted className="w-full h-full object-cover">
+              Your browser does not support the video tag.
+            </video>
+            <button
+              onClick={togglePlayPause}
+              className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer text-white p-2"
+            >
+              {isPlaying ? (
+                <FontAwesomeIcon icon={faCirclePause} className="w-8 h-8" />
+              ) : (
+                <FontAwesomeIcon icon={faCirclePlay} className="w-8 h-8" />
+              )}
+            </button>
+          </div>
+        </div>
+
+
       </motion.div>
     </div>
   )

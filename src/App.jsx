@@ -11,6 +11,7 @@ import {
   Works,
   StarsCanvas,
 } from "./components";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -28,6 +29,9 @@ const App = () => {
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
+        </div>
+        <div className="footer">
+          <Footer />
         </div>
       </div>
     </BrowserRouter>
