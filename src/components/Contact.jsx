@@ -11,6 +11,7 @@ import { slideIn } from '../utils/motion';
 
 import progVid from "../assets/progVid.mp4";
 import earth from '../assets/earth.mp4';
+import Resume from './Resume/Resume';
 
 
 
@@ -152,7 +153,12 @@ const Contact = () => {
             </button>
           </div>
         </div>
+        <div className="resume mt-10">
+          <h4 className={styles.sectionSubText}>View my Resume here</h4>
+          <Resume />
+          <br></br>
 
+        </div>
 
       </motion.div>
     </div>
