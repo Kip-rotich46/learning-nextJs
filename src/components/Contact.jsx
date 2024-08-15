@@ -133,9 +133,10 @@ const Contact = () => {
         </form>
       </motion.div>
 
+     
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
-        className='flex-1 h-full flex flex-col items-center justify-center xl:flex-1 xl:h-auto md:h-[550px]'>
+        className='flex-1 h-full flex flex-col items-center justify-center xl:flex-1 xl:h-auto md:h-[550px] mb-10'>
         <div className="relative w-full h-full overflow-hidden">
           <div className=" absolute top-[3%] left-1/2 transform -translate-x-1/2 w-full max-w-6xl h-[60vh] bg-black rounded-2xl overflow-hidden">
             <video ref={videoRef} src={earth} loop muted className="w-full h-full object-cover">
@@ -153,14 +154,14 @@ const Contact = () => {
             </button>
           </div>
         </div>
-        <div className="resume mt-10">
-          <h4 className={styles.sectionSubText}>View my Resume here</h4>
+        <div className="resume ">
+          <h4 className={`${styles.sectionSubText} mt-10`}>View my Resume here</h4>
           <Resume />
-          <br></br>
-
+         
         </div>
 
       </motion.div>
+      
     </div>
   )
 }

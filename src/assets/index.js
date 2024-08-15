@@ -37,6 +37,8 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import rick from "./rick.jpeg";
 import travel from "./travel.png";
+import kaba from './kabaLogo.jpeg';
+import litein from './liteinLogo.jpeg';
 
 export {
   logo,
@@ -74,4 +76,6 @@ export {
   tripguide,
   rick,
   travel,
+  kaba,
+  litein,
 };

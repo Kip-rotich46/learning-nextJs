@@ -12,6 +12,7 @@ import {
   StarsCanvas,
 } from "./components";
 import Footer from "./components/Footer/Footer";
+import Education from "./components/Education/Education";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Hero />
         </div>
         <About />
+        <Education />
         <Experience />
         <Tech />
         <Works />

@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'; // Import the specific icon
 
 import { styles } from '../../styles';
+import { SectionWrapper } from '../../hoc';
 
 const ResumeSection = () => {
   const handleClick = () => {
@@ -25,4 +26,4 @@ const ResumeSection = () => {
   );
 };
 
-export default ResumeSection;
+export default SectionWrapper(ResumeSection, 'resume');
