@@ -123,11 +123,11 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
+    title: "Industrial Attachment",
     company_name: "Kenya Tea Development Agency",
     icon: ktda,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "May 2023 - August 2023",
     points: [
       "Learned to debug code and optimize algorithms for efficiency.",
       "Gained practical knowledge in web development, contributing to projects and understanding the full stack of technologies involved.",
@@ -142,25 +142,25 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
+      "Developing and maintaining web applications using React Js and Express Js.",
+      "Customizes Web Solutions",
+      "Works closely with clients to understand their requirements, provide technical advice, and deliver projects on time.",
+      "Balances various projects simultaneously, often handling tasks like coding, testing, debugging, and deployment independently."
+    ],
+  },
+  {
+    title: "Web Developer",
+    company_name: "Freelancer",
+    icon: freelance,
+    iconBg: "#383E56",
+    date: "April 2024 - present",
+    points: [
       "Developing and maintaining web applications using React Js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  // {
-  //   title: "Web Developer",
-  //   company_name: "Shopify",
-  //   icon: shopify,
-  //   iconBg: "#383E56",
-  //   date: "Jan 2022 - Jan 2023",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
   // {
   //   title: "Full stack Developer",
   //   company_name: "Meta",
