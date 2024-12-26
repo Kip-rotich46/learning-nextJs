@@ -54,12 +54,22 @@ const Works = () => {
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
 
-      <div className="w-full flex">
+      {/* Updated the styling for this div */}
+      <div className="mt-3">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-xl leading-[30px]">
-          The following projects showcases my skills and Experiences through real-world examples of my work. Each project is briefly described with links to to code repositiories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
+          className="text-secondary text-[17px] leading-[30px] max-w-none">
+          The following projects showcase my skills and experiences through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. These projects reflect my ability to solve complex problems, work with different technologies, and manage projects effectively.
         </motion.p>
+        {/* Add a GitHub link */}
+        <motion.a
+          href="https://github.com/Kip-rotich46" // Replace with your GitHub profile link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white-500 hover:underline text-[17px] mt-4 inline-block"
+          variants={fadeIn('', '', 0.1, 1)}>
+          Check out more of my work on GitHub
+        </motion.a>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
@@ -67,11 +77,13 @@ const Works = () => {
           <ProjectCard
             key={`project-${index}`}
             index={index}
-            {...project} />
+            {...project}
+          />
         ))}
       </div>
     </>
-  )
-}
+  );
+};
+
 
 export default SectionWrapper(Works, '')

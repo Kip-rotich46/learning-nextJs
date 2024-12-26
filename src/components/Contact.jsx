@@ -16,6 +16,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     const { target } = e;
@@ -31,43 +32,49 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        "service_9risyf4", // Your Service ID
+        "template_u339isf", // Your Template ID
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Gideon Kiprotich",  // The recipient's name (use your own)
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "youremail@example.com",  // Replace with your email address
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "Z1GNGzANKVqaFS8Mv"  // Your Public Key
       )
       .then(
-        () => {
+        (response) => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
+          setSuccessMessage("Thank you! Your message has been sent. I will get back to you as soon as possible.");
           setForm({
             name: "",
             email: "",
             message: "",
           });
+
+          // Hide the success message after 5 seconds
+          setTimeout(() => {
+            setSuccessMessage(""); // Clear the success message after 5 seconds
+          }, 5000);
         },
         (error) => {
           setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
+          setSuccessMessage("Oops! Something went wrong. Please try again later.");
+          
+          // Hide the error message after 5 seconds
+          setTimeout(() => {
+            setSuccessMessage(""); // Clear the error message after 5 seconds
+          }, 5000);
         }
       );
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
@@ -118,6 +125,13 @@ const Contact = () => {
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
+
+        {/* Display success message */}
+        {successMessage && (
+          <div className="mt-4 text-white bg-green-500 p-4 rounded-lg">
+            {successMessage}
+          </div>
+        )}
       </motion.div>
 
       <motion.div

@@ -30,6 +30,9 @@ import {
   travel,
   kaba,
   litein,
+  extern,
+  python,
+  c,
 } from "../assets";
 
 export const navLinks = [
@@ -41,10 +44,17 @@ export const navLinks = [
     id: "work",
     title: "Work",
   },
+  { 
+    id: "projects", 
+    title: "Projects" },
   {
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "resume",
+    title: "Resume",
+  }
 ];
 
 const services = [
@@ -67,6 +77,19 @@ const services = [
 ];
 
 const technologies = [
+  
+   {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
   {
     name: "HTML 5",
     icon: html,
@@ -76,24 +99,12 @@ const technologies = [
     icon: css,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
   {
     name: "Redux Toolkit",
     icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
   },
   {
     name: "Node JS",
@@ -123,31 +134,20 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Industrial Attachment",
-    company_name: "Kenya Tea Development Agency",
-    icon: ktda,
-    iconBg: "#383E56",
-    date: "May 2023 - August 2023",
+    title: "Extern Ambassador",
+    company_name: "Extern",
+    icon: extern, // Replace 'extern' with the appropriate icon variable for Extern
+    iconBg: "#4CAF50", // Use a color that represents Extern's branding
+    date: "October 2024 - present",
     points: [
-      "Learned to debug code and optimize algorithms for efficiency.",
-      "Gained practical knowledge in web development, contributing to projects and understanding the full stack of technologies involved.",
-      "Improved ability to communicate technical concepts to non-technical stakeholders from other departments.",
-      "Adapted to a professional work environment, learning time management and the importance of early communication.",
+      "Promoting Extern's mission and values to peers and the wider community.",
+      "Serving as a liaison between Extern and its target audience, facilitating communication and engagement.",
+      "Participating in networking events, workshops, and ambassador-led initiatives to expand Extern's reach.",
+      "Sharing insights and feedback to help improve Extern's programs and offerings.",
+      "Leveraging social media platforms and other channels to increase awareness of Extern's opportunities.",
     ],
   },
-  {
-    title: "Full Stack Developer",
-    company_name: "Freelancer",
-    icon: freelance,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React Js and Express Js.",
-      "Customizes Web Solutions",
-      "Works closely with clients to understand their requirements, provide technical advice, and deliver projects on time.",
-      "Balances various projects simultaneously, often handling tasks like coding, testing, debugging, and deployment independently."
-    ],
-  },
+  
   {
     title: "Web Developer",
     company_name: "Freelancer",
@@ -161,19 +161,20 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
+  {
+    title: "Industrial Attachment",
+    company_name: "Kenya Tea Development Agency",
+    icon: ktda,
+    iconBg: "#383E56",
+    date: "May 2023 - August 2023",
+    points: [
+      "Learned to debug code and optimize algorithms for efficiency.",
+      "Gained practical knowledge in web development, contributing to projects and understanding the full stack of technologies involved.",
+      "Improved ability to communicate technical concepts to non-technical stakeholders from other departments.",
+      "Adapted to a professional work environment, learning time management and the importance of early communication.",
+    ],
+  },
+
 ];
 
 const education = [

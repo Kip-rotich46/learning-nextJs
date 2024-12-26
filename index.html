@@ -2,12 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Add a favicon for better user experience -->
     <link rel="icon" type="image/svg+xml" href="./src/assets/logo3.png" />
+    
+    <!-- Viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gideon | Portfolio</title>
+    
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Gideon Kiprotich - Full Stack Developer Portfolio. Explore my projects, skills, and experience in web and mobile development." />
+    
+    <!-- Meta Tags for Social Media -->
+    <meta property="og:title" content="Gideon Kiprotich | Full Stack Developer Portfolio" />
+    <meta property="og:description" content="Explore my portfolio showcasing my web and mobile development skills. Check out my projects, experience, and contact details." />
+    <meta property="og:image" content="https://yourportfolio.com/src/assets/logo3.png" />
+    <meta property="og:url" content="https://yourportfolio.com" />
+    <meta property="og:type" content="website" />
+    
+    <!-- SEO Title -->
+    <title>Gideon Kiprotich | Portfolio</title>
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gideon Kiprotich",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://yourportfolio.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/gideonkiprotich",
+          "https://github.com/Kip-rotich46"
+        ],
+        "image": "https://yourportfolio.com/src/assets/logo3.png"
+      }
+    </script>
+
+    <!-- Open Graph (OG) and Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gideon Kiprotich | Full Stack Developer Portfolio" />
+    <meta name="twitter:description" content="Explore my portfolio showcasing my web and mobile development skills." />
+    <meta name="twitter:image" content="https://yourportfolio.com/src/assets/logo3.png" />
+    
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Main React entry point -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
